@@ -1,0 +1,97 @@
+
+/* reset css */
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* main css */
+.carousel {
+  position: relative;
+  margin: 20px auto;
+  width: 300px;
+  height: 225px;
+  overflow: hidden;
+}
+
+
+.imgCt {
+  position: absolute;
+  width: 1200px;
+}
+
+.imgCt:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.imgCt li {
+  float: left;
+}
+
+.imgCt img {
+  width: 300px;
+}
+
+/* button css */
+.back,
+.forward {
+  position: absolute;
+  color: #eee;
+  font-size: 26px;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.back:hover,
+.forward:hover {
+  opacity: .4;
+  transition: all .5s
+}
+
+.back {      
+  top: 50%;
+  transform: translateY(-60%) rotate(180deg);
+  left: 10px;
+}
+
+.forward {
+  top: 50%;
+  transform: translateY(-60%);
+  right: 10px;
+}
+
+/* dots css */
+.dots {
+  position: absolute;
+  bottom: 5px;
+  right: 50%;
+  transform: translatex(50%);
+  /* border: 1px solid yellow; */
+}
+
+.dots span {
+  display:inline-block;
+  width: 15px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #eee;
+  transition: all .5s;
+  opacity: .6;
+  cursor: pointer;
+}
+
+.dots span:hover {
+  transition: all .5s;
+  opacity: 1;
+}
+
+.dots span.active {
+  width: 20px;
+  color: white;
+  opacity: 1;
+  transition: all .5s;
+}
